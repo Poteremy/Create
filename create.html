@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="mainContent">
+            <h1>Create A Madlib</h1>
+            <div class="flex-row">
+                <a href="index.html" class="btn2">Go Home</a>
+                <button type="button" class="btn2" onclick="submitWords(event)">Play It</button>
+            </div>
+            <button id="myBtn" type="button" class="btn">How To Play</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="flex-column flex-center">
+                        <h2>How To Play</h2>
+                        <p>
+                        To add new inputs, press the "Add Input" button <br> <br>
+                        In the new word input, insert the <em>type</em> of word. (i.e. "noun", "adjective", etc.) <br> <br>
+                        Type your story into the box under the story title input. <br><br>
+                        To indicate a place where a user input word will appear in the story, simple type the number corresponding with that input. <br><br>
+                        <b>THE FIRST WORD INPUT HAS A NUMBER OF 0. THE SECOND ONE HAS A NUMBER OF 1.</b><br><br>
+                        When completed, press the "Play It" button to have someone play your Madlib. <br><br>
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-row">
+                <form action="">
+                    <input 
+                    type="text" 
+                    id="storyTitle"
+                    placeholder="Story Title">
+                    <textarea
+                    id="story"
+                    placeholder="Type your MADLIB story here...">
+                    </textarea>
+                </form>
+                <div class="flex-column">
+                    <button id="addInput" type="button" class="btn3" onclick="addNew(event)">Add Input</button>
+                    <form action="" id="inputForm" class="flex-column ">
+                        <input 
+                        type="text"
+                        name="input1"
+                        id="1"
+                        placeholder="Word Type">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="create.js"></script>
+</body>
+</html>
